@@ -15,5 +15,5 @@ acbuild --debug run -- /usr/glibc-compat/sbin/ldconfig /lib /usr/glibc-compat/li
 acbuild --debug copy-to-dir nsswitch.conf /etc
 acbuild --debug run -- apk del curl
 acbuild --debug run -- rm -rf glibc.apk glibc-bin.apk /var/cache/apk/*
-acbuild --debug write --overwrite cockroach.aci
+acbuild --debug write --overwrite alpine-glibc.aci
 acbuild --debug end
