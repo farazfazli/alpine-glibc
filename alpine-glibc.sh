@@ -3,6 +3,8 @@ alias acbuild="/home/core/acbuild"
 trap "{ export EXT=$?; acbuild --debug end && exit $EXT; }" EXIT
 acbuild --debug begin
 acbuild --debug set-name farazfazli.com/alpine-glibc
+acbuild --debug annotation add authors "Faraz Fazli <farazfazli@gmail.com>"
+acbuild --debug label add version 0.1
 acbuild --debug dependency add quay.io/coreos/alpine-sh
 GLIBC_VERSION=2.23-r3
 acbuild --debug run -- apk add --update curl
